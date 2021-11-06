@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
     "core-js": "^3.6.5",
+    "leaflet": "^1.7.1",
     "quasar": "^2.0.0",
+    "vue2-leaflet": "^2.7.1",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
