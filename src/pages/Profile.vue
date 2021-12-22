@@ -1,11 +1,25 @@
 <template>
-  <div class="q-ma-lg">
-    <h5>Ofensiva</h5>
+  <q-page class="q-ma-lg">
+    <div class="flexbox row justify-between">
+      <div>
+        <h4 class="q-ma-none" style="font-weight: 800;">Salvador Rombe</h4>
+        <p class="q-ma-none text-subtitle2 text-grey-7">SalvadorRo7751</p>
+        <p class="q-ma-none text-grey-7"><q-icon class="q-ml-none q-mr-sm" name="timer" />Por aqui desde agosto de 2020</p>
+      </div>
+      <div class="bg-grey-9 q-pl-lg" style="border-radius:2em; font-size:5em; width: 1.4em; color: white; ">S</div>
+    </div>
+
+    <q-separator></q-separator>
+    <h5>Estatisticas</h5>
+
+
+
     <StoreCard 
       name="Bloqueio de ofensiva" 
-      price="200" 
-      text="Proteja a sua ofensiva se perder um dia de prática. Coloque até 2 em uso de umma vez." 
+      price="Dias de ofensiva" 
+      text="0." 
       icon="img:img/streak-freeze.svg"
+      size="2"
     />
     <StoreCard 
       name="Aposta: O Dobro ou Nada" 
@@ -55,7 +69,7 @@
       text="Mantenha 7 dias de ofensiva pra dobrar a sua aposta de 50 cristais" 
       icon="img:img/flaming-calendar.svg"
     />
-  </div>
+  </q-page>
 </template>
 
 <script>
@@ -63,7 +77,7 @@
 
 import StoreCard from "components/maza/StoreCard.vue"
 export default {
-  name: 'Maza',
+  name: 'Profile',
   components: {
     StoreCard
   }
