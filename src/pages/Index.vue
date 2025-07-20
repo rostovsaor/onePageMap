@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <l-map style="height:95vh" ref="map" v-model:zoom="zoom" :center="mozCenter">
+    <l-map style="height:95vh" ref="map" v-model:zoom="zoom" :center="mozCenter" @click="click">
       <l-tile-layer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         layer-type="base"
@@ -12,7 +12,8 @@
         :lat-lng="item.latlng" 
         :radius="item.radius"
         color="green"
-        fillColor="blue"
+        fillColor="#e4ce7f"
+        fillOpacity: 1
       >
         <l-popup>
           <p><b>{{item.name}}</b></p>
@@ -47,7 +48,6 @@ export default defineComponent({
         {
           name: 'Maputo',
           latlng: [-25.71647, 32.21191],
-          // radius: getRandomInt(20000, 105000)
           radius: 95000
         },
         {
@@ -104,6 +104,9 @@ export default defineComponent({
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    },
+    click(e) {
+      console.log("event :", e)
     }
   },
   async beforeMount() {
